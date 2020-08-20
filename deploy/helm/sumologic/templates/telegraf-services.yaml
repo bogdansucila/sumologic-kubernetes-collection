@@ -1,0 +1,19 @@
+{{- if .Values.telegraf.enabled }}
+{{- range $namespace := .Values.telegraf.namespaces }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: telegraf-metrics
+  namespace: {{ $namespace }}
+  labels:
+    sumologic.com/service: telegraf
+spec:
+  ports:
+  - port: 9273
+    targetPort: 9273
+    protocol: TCP
+    name: metrics
+  selector:
+    sumologic.com/service: telegraf
+{{- end }}
+{{- end }}

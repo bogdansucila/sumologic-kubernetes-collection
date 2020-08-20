@@ -1482,6 +1482,8 @@ otelcol:
 ## ref: https://github.com/influxdata/helm-charts/blob/master/charts/telegraf-operator/values.yaml
 telegraf:
   enabled: false
+  ## list of namespaces to obtain telegraf metrics from. The namespaces have to be already created
+  namespaces: []
   ## fullnameOverride: telegraf is obligatory due to certificates issue used by default installation
   ## ToDo: Fix related issue
   fullnameOverride: telegraf
