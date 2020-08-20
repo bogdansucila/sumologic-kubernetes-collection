@@ -19,4 +19,4 @@ dependencies:
     alias: telegraf
     version: 1.1.0
     repository: https://helm.influxdata.com/
-    condition: telegraf-operator.enabled
+    condition: telegraf.enabled

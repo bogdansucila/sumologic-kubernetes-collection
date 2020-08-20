@@ -1487,6 +1487,7 @@ telegraf:
   ## fullnameOverride: telegraf is obligatory due to certificates issue used by default installation
   ## ToDo: Fix related issue
   fullnameOverride: telegraf
+  name: telegraf
   replicaCount: 1
   classes:
     secretName: "telegraf-operator-classes"
