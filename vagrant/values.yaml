@@ -26,5 +26,3 @@ sumologic:
 telegraf:
   enabled: true
   replicaCount: 1
-  namespaces:
-    - redis-demo
